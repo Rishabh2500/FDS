@@ -4,24 +4,6 @@ const logger = require('../../utils/logger');
 
 module.exports = async (req, res, next) => {
 
-    // const user_id = req.user?.user_id;
-
-    // const isAdmin = await User.findOne ({ 
-    //     where: {
-    //         user_id,
-    //         role_id: 1
-    //     }
-    // });
-
-    // if (!isAdmin) {
-    //     logger.warn("Only admin can create users");
-
-    //     return res.status(401).json({
-    //     success: false,
-    //     message: "You're not an admin"
-    //   });
-    // }
-
     const schema = Joi.object({
         name: Joi.string().trim().max(100).required().messages({
             "string.empty": "Name is required",

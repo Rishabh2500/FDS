@@ -8,17 +8,6 @@ module.exports = async (req, res, next) => {
     const loggedInUserId = req.user?.user_id;
     const targetUserId = parseInt(req.params.user_id);
 
-    // const user = await User.findOne({ where: { user_id: loggedInUserId } });
-
-    // if (!user || user.role_id !== 1) {
-    //   logger.warn("Update blocked - Non-admin attempt", { loggedInUserId });
-
-    //   return res.status(403).json({
-    //     success: false,
-    //     message: "Only admin can update user details"
-    //   });
-    // }
-
     const isSelf = loggedInUserId === targetUserId;
 
     let schema;
