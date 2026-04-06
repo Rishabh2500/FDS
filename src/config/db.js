@@ -10,6 +10,12 @@ const sequelize = new Sequelize({
     database: process.env.DB_NAME,
     logging: false,
     timezone: '+05:30',
+    dialectOptions: process.env.DB_SSL === "true" ?{
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    } : {} ,
 
     pool: {
         max: 5,
