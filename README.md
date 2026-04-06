@@ -206,3 +206,7 @@ Rishabh Sharma
 
 🔗 LinkedIn: www.linkedin.com/in/rishabh-sharma-134112219
 ```
+
+## 📜 License
+
+This project is licensed under the MIT License.
