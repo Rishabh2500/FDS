@@ -159,7 +159,7 @@ router.post('/create_user', auth_middleware, authLimiter, admin_auth, register_m
  *               password:
  *                 type: string
  *                 format: password
- *                 example: Rishabh@2500
+ *                 example: Rishabh@Zorvyn
  *
  *     responses:
  *       200:
