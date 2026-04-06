@@ -6,9 +6,6 @@ A robust backend system for managing financial records, categories, and analytic
 
 ## 🚀 Live Demo
 
-- 🌐 API Base URL:  
-  https://fds-2elm.onrender.com
-
 - 📘 Swagger Docs:  
   https://fds-2elm.onrender.com/api-docs
 
@@ -28,26 +25,26 @@ A robust backend system for managing financial records, categories, and analytic
 
 ## 📁 Project Structure
 
+```
 src/
-├── config/ # DB & Swagger config
-├── controllers/ # Business logic
-├── middlewares/ # Auth, validation, rate limiting
-├── models/ # Sequelize models
-├── routes/ # API routes
-├── utils/ # Logger
-└── app.js # Express app setup
+├── config/        # DB & Swagger config
+├── controllers/   # Business logic
+├── middlewares/   # Auth, validation, rate limiting
+├── models/        # Sequelize models
+├── routes/        # API routes
+├── utils/         # Logger
+└── app.js         # Express app setup
 
-server.js # Entry point
-.env.example # Environment variables template
-
----
+server.js          # Entry point
+.env.example       # Environment variables template
+```
 
 ## ⚙️ Setup Instructions
 
 🔹 1. Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/Rishabh2500/FDS>
 cd Finance-Dashboard-System
 
 🔹 2. Install Dependencies
