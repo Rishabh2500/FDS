@@ -427,19 +427,6 @@ exports.delete = async (req, res) => {
     const loggedInUserId = req.user.user_id;
     const targetUserId = parseInt(req.params.user_id);
 
-    // const adminUser = await User.findOne({
-    //   where: { user_id: loggedInUserId }
-    // });
-
-    // if (!adminUser || adminUser.role_id !== 1) {
-    //   logger.warn("Unauthorized user delete attempt", { loggedInUserId });
-
-    //   return res.status(403).json({
-    //     success: false,
-    //     message: "Only admins can delete users"
-    //   });
-    // }
-
     if (loggedInUserId === targetUserId) {
       logger.warn("Admin cannot delete self", { loggedInUserId });
 
@@ -524,17 +511,6 @@ exports.users_list = async (req, res) => {
         message: "Unauthorized"
       });
     };
-
-    // if (req.user.role_id === 3) {
-    //   logger.warn("Viewer cannot access user list", {
-    //     user_id: req.user.user_id
-    //   });
-
-    //   return res.status(403).json({
-    //     success: false,
-    //     message: "Access denied"
-    //   });
-    // }
 
     const page = parseInt(req.query.page) || 1;
     const limit = 10;
